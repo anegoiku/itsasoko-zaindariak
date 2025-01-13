@@ -23,7 +23,7 @@
                         <input type="text" class="form-control" id="abizena" name="abizena">
                         <label for="rola" class="form-label">Aukeratu rola:</label>
                         <select class="form-select" aria-label="Aukeratu rola:" id="rola" name="rola">
-                            <option selected>Aukeratu rola: </option>
+                            <option selected value="">Aukeratu rola: </option>
                             <option value="Kapitaina">Kapitaina</option>
                             <option value="Makinen Burua">Makinen Burua</option>
                             <option value="Mekanikoa">Mekanikoa</option>
