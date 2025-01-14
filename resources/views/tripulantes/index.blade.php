@@ -12,6 +12,12 @@
     <ul>
     @foreach ($tripulantes as $tripulante)
         <li><a href="{{route('tripulantes.show', $tripulante->id)}}">{{$tripulante->izena}} -- {{$tripulante->abizena}} -- {{$tripulante->rola}}</a> | 
+        <a href="{{route('tripulantes.edit', $tripulante->id)}}">EDITAR</a> | 
+        <form method="POST" action="{{route('tripulantes.destroy', $tripulante->id)}}">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="BORRAR" />
+        </form> 
     </li>
     @endforeach
     </ul>

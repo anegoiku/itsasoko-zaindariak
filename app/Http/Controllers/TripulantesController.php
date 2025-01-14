@@ -49,24 +49,26 @@ class TripulantesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(tripulantes $tripulantes)
+    public function edit(tripulantes $tripulantes): View
     {
-        //
+        return view('tripulantes.edit', compact('tripulantes'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatetripulantesRequest $request, tripulantes $tripulantes)
+    public function update(Request $request, tripulantes $tripulantes): RedirectResponse
     {
-        //
+        $tripulantes->update($request->all());
+        return redirect()->route('tripulantes.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(tripulantes $tripulantes)
+    public function destroy(tripulantes $tripulantes): RedirectResponse
     {
-        //
+        $tripulantes->delete();
+        return redirect()->route('tripulantes.index');
     }
 }
