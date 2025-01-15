@@ -16,8 +16,13 @@ return new class extends Migration
             $table->string('izena');
             $table->string('abizena');
             $table->string('rola');
-            $table->int('id_bidaia');
+            $table->unsignedBigInteger('id_bidaia');
             $table->timestamps();
+
+            $table->foreign('id_bidaia')
+                  ->references('id')
+                  ->on('bidaiak')
+                  ->onDelete('cascade');
         });
     }
 

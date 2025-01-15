@@ -11,13 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bidaiaks', function (Blueprint $table) {
+        Schema::create('bidaiak', function (Blueprint $table) {
             $table->id();
             $table->string('helmuga');
             $table->date('hasiera');
             $table->date('amaiera');
-            $table->int('id_tripulante');
+            $table->unsignedBigInteger('id_tripulante');
             $table->timestamps();
+
+            $table->foreign('id_tripulante')
+                  ->references('id')
+                  ->on('tripulantes')
+                  ->onDelete('cascade');
         });
     }
 
