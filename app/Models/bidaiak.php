@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class tripulantes extends Model
+class bidaiak extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['izena','abizena','rola','id_bidaia'];
+    protected $fillable = ['helmuga','hasiera','amaiera','id_tripulante'];
 
     public function tripulazioa(){
-        return $this->hasMany(bidaiak::class, 'id_bidaia');
+        return $this->hasMany(tripulantes::class, 'id_tripulante');
     }
 }

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreviajesRequest;
-use App\Http\Requests\UpdateviajesRequest;
-use App\Models\viajes;
+use App\Http\Requests\StorebidaiakRequest;
+use App\Http\Requests\UpdatebidaiakRequest;
+use App\Models\bidaiak;
 
-class ViajesController extends Controller
+class BidaiakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class ViajesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreviajesRequest $request)
+    public function store(StorebidaiakRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class ViajesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(viajes $viajes)
+    public function show(bidaiak $bidaiak)
     {
         //
     }
@@ -43,7 +43,7 @@ class ViajesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(viajes $viajes)
+    public function edit(bidaiak $bidaiak)
     {
         //
     }
@@ -51,7 +51,7 @@ class ViajesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateviajesRequest $request, viajes $viajes)
+    public function update(UpdatebidaiakRequest $request, bidaiak $bidaiak)
     {
         //
     }
@@ -59,7 +59,7 @@ class ViajesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(viajes $viajes)
+    public function destroy(bidaiak $bidaiak)
     {
         //
     }
