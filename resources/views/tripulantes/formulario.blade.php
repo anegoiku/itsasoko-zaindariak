@@ -21,6 +21,8 @@
                         <input type="text" class="form-control" id="izena" name="izena">
                         <label for="abizena" class="form-label">Abizena</label>
                         <input type="text" class="form-control" id="abizena" name="abizena">
+                        <label for="sartze_data" class="form-label">Sartze Data</label>
+                        <input type="date" class="form-control" id="sartze_data" name="sartze_data">
                         <label for="rola" class="form-label">Aukeratu rola:</label>
                         <select class="form-select" aria-label="Aukeratu rola:" id="rola" name="rola">
                             <option selected value="">Aukeratu rola: </option>

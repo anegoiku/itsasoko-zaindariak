@@ -11,7 +11,7 @@
     <a href="{{route('bidaiak.formulario')}}">CREAR</a>
     <ul>
     @foreach ($bidaiak as $bidaia)
-        <li><a href="{{route('bidaiak.show', $bidaia->id)}}">{{$bidaia->helguma}} -- {{$bidaia->hasiera}} -- {{$bidaia->amaiera}}</a> | 
+        <li><a href="{{route('bidaiak.show', $bidaia->id)}}">{{$bidaia->helmuga}} -- {{$bidaia->hasiera}} -- {{$bidaia->amaiera}}</a> | 
         <a href="{{route('bidaiak.edit', $bidaia->id)}}">EDITAR</a> | 
         <form method="POST" action="{{route('bidaiak.destroy', $bidaia->id)}}">
             @csrf

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TripulantesController;
 use App\Http\Controllers\BidaiakController;
+use App\Http\Controllers\MedikuakController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -73,4 +74,4 @@ Route::delete('/medikuak/destroy/{medikuak}', [MedikuakController::class, 'destr
 
 Route::resource('medikuak', MedikuakController::class);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

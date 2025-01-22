@@ -20,9 +20,10 @@
                         <label for="helmuga" class="form-label">Helmuga</label>
                         <input type="text" class="form-control" id="helmuga" name="helmuga">
                         <label for="hasiera" class="form-label">Hasiera</label>
-                        <input type="text" class="form-control" id="hasiera" name="hasiera">
+                        <input type="date" class="form-control" id="hasiera" name="hasiera">
                         <label for="amaiera" class="form-label">Amaiera</label>
-                        <input type="text" class="form-control" id="amaiera" name="amaiera">
+                        <input type="date" class="form-control" id="amaiera" name="amaiera">
+
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Gorde</button>
                 </form>

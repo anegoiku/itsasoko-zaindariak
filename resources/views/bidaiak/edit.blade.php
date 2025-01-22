@@ -19,9 +19,9 @@
                     @csrf
                     <div class="mb-2">
                         <label for="hasiera" class="form-label">Hasiera</label>
-                        <input type="text" name="hasiera" class="form-control" id="hasiera" value="{{$bidaiak->hasiera}}">
+                        <input type="date" name="hasiera" class="form-control" id="hasiera" value="{{$bidaiak->hasiera}}">
                         <label for="amaiera" class="form-label">Amaiera</label>
-                        <input type="text" name="amaiera" class="form-control" id="amaiera" value="{{$bidaiak->amaiera}}">
+                        <input type="date" name="amaiera" class="form-control" id="amaiera" value="{{$bidaiak->amaiera}}">
                         <label for="helmuga" class="form-label">Helmuga</label>
                         <input type="text" name="helmuga" class="form-control" id="helmuga" value="{{$bidaiak->helmuga}}">
                         <!-- Tripulante -->

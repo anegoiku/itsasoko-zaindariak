@@ -22,7 +22,7 @@
                         <label for="abizena" class="form-label">Abizena</label>
                         <input type="text" name="abizena" class="form-control" id="abizena">
                         <label for="sartze_data" class="form-label">Sartze Data</label>
-                        <input type="number" name="sartze_data" class="form-control" id="sartze_data">
+                        <input type="date" name="sartze_data" class="form-control" id="sartze_data">
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Gorde</button>
                 </form>

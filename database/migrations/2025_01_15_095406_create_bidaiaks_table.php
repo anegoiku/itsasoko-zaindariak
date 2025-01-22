@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('hasiera');
             $table->date('amaiera');
             $table->unsignedBigInteger('id_tripulante');
-            $table->unsignedBigInteger('id_bidaia');
+            $table->unsignedBigInteger('id_medikua');
             $table->timestamps();
 
             $table->foreign('id_tripulante')
@@ -25,9 +25,9 @@ return new class extends Migration
                   ->on('tripulantes')
                   ->onDelete('cascade');
 
-            $table->foreign('id_bidaia')
+            $table->foreign('id_medikua')
                   ->references('id')
-                  ->on('bidaia')
+                  ->on('medikuak')
                   ->onDelete('cascade');
         });
     }

@@ -8,8 +8,7 @@
 </head>
 <body>
     <a href="{{route('medikuak.index')}}">Atras</a>
-    <h1>{{$medikuak->izena}}</h1>
-    <p>{{$medikuak->abizena}}</p>
-    <p>{{$medikuak->sartze_data}}</p>
+    <h1>{{$medikuak->izena}} {{$medikuak->abizena}}</h1>
+    <p>Sartze Data: {{$medikuak->sartze_data}}</p>
 </body>
 </html>
