@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Document</title>
 </head>
 
@@ -35,9 +36,9 @@
     <ul>
         @foreach ($medikuak as $medikua)
         <ul class="list-group">
-            <li class="list-group-item"><a href="{{route('medikuak.show', $medikua->id)}}">{{$medikua->izena}} -- {{$medikua->abizena}} -- {{$medikua->sartze_data}}</a>
-                | <a href="{{route('medikuak.edit', $medikua->id)}}" class="btn btn-success">EDITAR</a>
-                | <form method="POST" action="{{route('medikuak.destroy', $medikua->id)}}">
+            <li class="list-group-item"><a href="{{route('medikuak.show', $medikua->id)}}">{{$medikua->izena}} {{$medikua->abizena}} | {{$medikua->sartze_data}}</a>
+                 <a href="{{route('medikuak.edit', $medikua->id)}}" class="btn btn-success">EDITAR</a>
+                 <form method="POST" action="{{route('medikuak.destroy', $medikua->id)}}">
                     @csrf
                     @method('DELETE')
                     <button type="button" class="btn btn-danger">BORRAR</button>

@@ -10,19 +10,6 @@ body {
     padding: 0;
 }
 
-.navbar {
-    background-color: #007bff;
-}
-
-.navbar .navbar-brand, 
-.navbar .nav-link {
-    color: white !important;
-}
-
-.navbar .nav-link.active {
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 
 h1 {
@@ -43,6 +30,7 @@ h1 {
 }
 
 
+
 ul {
     list-style: none;
     padding: 0;
@@ -58,13 +46,17 @@ ul {
 
 .list-group-item a {
     text-decoration: none;
-    color: #007bff;
+    color: black;
+    padding: 10px;
+    
 }
 
-.list-group-item a:hover {
-    text-decoration: underline;
-    color: #0056b3;
+.list-group-item .btn-success{
+    color: white;
+    height: 50px;
 }
+
+
 
 .list-group-item:hover {
     background-color: #f1f1f1;
@@ -77,6 +69,7 @@ form {
 
 form .btn-danger {
     margin-left: 10px;
+    height: 50px;
 }
 
 footer {
