@@ -14,7 +14,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <a href="{{route('bidaiak.index')}}">Atras</a>
-                <h1>SORTU TRIPULATZAILEA</h1>
+                <h1>SORTU BIDAIA</h1>
                 <form action="{{ route('bidaiak.store') }}" method="POST">
                     @csrf
                     <div class="mb-2">

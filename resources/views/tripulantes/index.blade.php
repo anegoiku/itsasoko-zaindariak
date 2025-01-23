@@ -38,8 +38,8 @@
         @foreach ($tripulantes as $tripulante)
         <ul class="list-group">
             <li class="list-group-item"><a href="{{route('tripulantes.show', $tripulante->id)}}">{{$tripulante->izena}} -- {{$tripulante->abizena}} -- {{$tripulante->rola}}</a>
-                | <a href="{{route('tripulantes.edit', $tripulante->id)}}" class="btn btn-success">EDITAR</a>
-                | <form method="POST" action="{{route('tripulantes.destroy', $tripulante->id)}}">
+                <a href="{{route('tripulantes.edit', $tripulante->id)}}" class="btn btn-success">EDITAR</a>
+                <form method="POST" action="{{route('tripulantes.destroy', $tripulante->id)}}">
                     @csrf
                     @method('DELETE')
                     <button type="button" class="btn btn-danger">BORRAR</button>

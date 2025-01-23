@@ -22,13 +22,13 @@ Route::middleware('auth')->group(function () {
 
 // Tripulante
 
+Route::get('/tripulantes/show/{tripulantes}', [TripulantesController::class, 'show'])->name('tripulantes.show');
 Route::get('/tripulantes', [TripulantesController::class, 'index'])->name('tripulantes.index');
 
 Route::get('/tripulantes/form', [TripulantesController::class, 'form'])->name('tripulantes.formulario');
 
 Route::post('/tripulantes/store', [TripulantesController::class, 'store'])->name('tripulantes.store');
 
-Route::get('/tripulantes/show/{tripulantes}', [TripulantesController::class, 'show'])->name('tripulantes.show');
 
 Route::get('/tripulantes/{tripulantes}/edit', [TripulantesController::class, 'edit'])->name('tripulantes.edit');
 
