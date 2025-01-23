@@ -1,14 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">AITA MARI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +33,8 @@
     <h1>MEDIKUAK</h1>
     <a href="{{route('medikuak.formulario')}}" class="btn btn-primary">CREAR</a>
     <ul>
-    @foreach ($medikuak as $medikua)
-    <ul class="list-group">
+        @foreach ($medikuak as $medikua)
+        <ul class="list-group">
             <li class="list-group-item"><a href="{{route('medikuak.show', $medikua->id)}}">{{$medikua->izena}} -- {{$medikua->abizena}} -- {{$medikua->sartze_data}}</a>
                 | <a href="{{route('medikuak.edit', $medikua->id)}}" class="btn btn-success">EDITAR</a>
                 | <form method="POST" action="{{route('medikuak.destroy', $medikua->id)}}">
@@ -43,7 +44,8 @@
                 </form>
             </li>
         </ul>
-    @endforeach
+        @endforeach
     </ul>
 </body>
+
 </html>
