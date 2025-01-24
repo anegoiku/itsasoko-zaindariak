@@ -36,7 +36,6 @@ Route::put('/tripulantes/update/{tripulantes}', [TripulantesController::class, '
 
 Route::delete('/tripulantes/destroy/{tripulantes}', [TripulantesController::class, 'destroy'])->name('tripulantes.destroy');
 
-// Route::resource('tripulantes', TripulantesController::class);
 
 // Bidaiak
 
@@ -54,7 +53,6 @@ Route::put('/bidaiak/update/{bidaiak}', [BidaiakController::class, 'update'])->n
 
 Route::delete('/bidaiak/destroy/{bidaiak}', [BidaiakController::class, 'destroy'])->name('bidaiak.destroy');
 
-Route::resource('bidaiak', BidaiakController::class);
 
 // Medikuak
 
@@ -72,6 +70,5 @@ Route::put('/medikuak/update/{medikuak}', [MedikuakController::class, 'update'])
 
 Route::delete('/medikuak/destroy/{medikuak}', [MedikuakController::class, 'destroy'])->name('medikuak.destroy');
 
-Route::resource('medikuak', MedikuakController::class);
 
 require __DIR__ . '/auth.php';

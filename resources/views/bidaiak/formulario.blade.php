@@ -27,7 +27,7 @@
 
                         <!-- <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
                         @foreach ($tripulantes as $tripulante)
-                            <option value="0">{{$tripulante->izena}} {{$tripulante->abizena}}</option>
+                            <option value="{{$tripulante->id}}">{{$tripulante->izena}} {{$tripulante->abizena}}</option>
                         @endforeach
                         </select> -->
                     </div>
