@@ -9,7 +9,7 @@ class tripulantes extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['izena','abizena','rola','id_bidaia'];
+    protected $fillable = ['izena','abizena','rola','sartze_data','id_bidaia'];
 
     public function tripulazioa(){
         return $this->hasMany(bidaiak::class, 'id_bidaia');

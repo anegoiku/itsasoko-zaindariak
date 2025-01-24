@@ -24,12 +24,6 @@
                         <input type="date" class="form-control" id="hasiera" name="hasiera">
                         <label for="amaiera" class="form-label">Amaiera</label>
                         <input type="date" class="form-control" id="amaiera" name="amaiera">
-
-                        <!-- <select class="form-multi-select" id="ms1" multiple data-coreui-search="true">
-                        @foreach ($tripulantes as $tripulante)
-                            <option value="{{$tripulante->id}}">{{$tripulante->izena}} {{$tripulante->abizena}}</option>
-                        @endforeach
-                        </select> -->
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Gorde</button>
                 </form>

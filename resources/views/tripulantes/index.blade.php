@@ -35,20 +35,30 @@
     <h1>TRIPULATZAILEAK</h1>
     <a href="{{route('tripulantes.formulario')}}" class="btn btn-primary">CREAR</a>
     <br><br>
-    <ul>
-        @foreach ($tripulantes as $tripulante)
-        <ul class="list-group">
-            <li class="list-group-item"><a href="{{route('tripulantes.show', $tripulante->id)}}">{{$tripulante->izena}} {{$tripulante->abizena}} | {{$tripulante->rola}}</a>
-                <a href="{{route('tripulantes.edit', $tripulante->id)}}" class="btn btn-success">EDITAR</a>
-                <form method="POST" action="{{route('tripulantes.destroy', $tripulante->id)}}">
-                    @csrf
-                    @method('DELETE')
-                    <button type="button" class="btn btn-danger">BORRAR</button>
-                </form>
-            </li>
-        </ul>
-        @endforeach
-    </ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Izen-Abizena</th>
+                    <th scope="col">Rola</th>
+                    <th scope="col">Akzioak</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($tripulantes as $tripulante)
+                <tr>
+                    <th scope="row"><a href="{{route('tripulantes.show', $tripulante->id)}}">{{$tripulante->izena}} {{$tripulante->abizena}}</a></th>
+                    <td>{{$tripulante->rola}}</td>
+                    <td><a href="{{route('tripulantes.edit', $tripulante->id)}}" class="btn btn-success">EDITAR</a>
+                        <form method="POST" action="{{route('tripulantes.destroy', $tripulante->id)}}">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" value="BORRAR" class="btn btn-danger"/>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
 </body>
 
 </html>

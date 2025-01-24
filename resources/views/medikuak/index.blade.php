@@ -33,20 +33,32 @@
     </nav>
     <h1>MEDIKUAK</h1>
     <a href="{{route('medikuak.formulario')}}" class="btn btn-primary">CREAR</a>
-    <ul>
-        @foreach ($medikuak as $medikua)
-        <ul class="list-group">
-            <li class="list-group-item"><a href="{{route('medikuak.show', $medikua->id)}}">{{$medikua->izena}} {{$medikua->abizena}} | {{$medikua->sartze_data}}</a>
-                 <a href="{{route('medikuak.edit', $medikua->id)}}" class="btn btn-success">EDITAR</a>
-                 <form method="POST" action="{{route('medikuak.destroy', $medikua->id)}}">
-                    @csrf
-                    @method('DELETE')
-                    <button type="button" class="btn btn-danger">BORRAR</button>
-                </form>
-            </li>
-        </ul>
-        @endforeach
-    </ul>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Izen-Abizena</th>
+                <th scope="col">Sartze Data</th>
+                <th scope="col">Akzioak</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($medikuak as $medikua)
+            <tr>
+                <th scope="row"><a href="{{route('medikuak.show', $medikua->id)}}">{{$medikua->izena}} {{$medikua->abizena}}</a></th>
+                <td>{{$medikua->sartze_data}}</td>
+                <td>
+                    <a href="{{route('medikuak.edit', $medikua->id)}}" class="btn btn-success">EDITAR</a>
+                    <form method="POST" action="{{route('medikuak.destroy', $medikua->id)}}">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="BORRAR" class="btn btn-danger"/>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </body>
 
 </html>

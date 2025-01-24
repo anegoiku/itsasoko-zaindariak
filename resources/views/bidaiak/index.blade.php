@@ -33,20 +33,34 @@
     </nav>
     <h1>BIDAIAK</h1>
     <a href="{{route('bidaiak.formulario')}}" class="btn btn-primary">CREAR</a>
-    <ul>
-        @foreach ($bidaiak as $bidaia)
-        <ul class="list-group">
-            <li class="list-group-item"><a href="{{route('bidaiak.show', $bidaia->id)}}">{{$bidaia->helmuga}} | {{$bidaia->hasiera}} -- {{$bidaia->amaiera}}</a>
-                 <a href="{{route('bidaiak.edit', $bidaia->id)}}" class="btn btn-success">EDITAR</a>
-                 <form method="POST" action="{{route('bidaiak.destroy', $bidaia->id)}}">
-                    @csrf
-                    @method('DELETE')
-                    <button type="button" class="btn btn-danger">BORRAR</button>
-                </form>
-            </li>
-        </ul>
-        @endforeach
-    </ul>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Helmuga</th>
+                <th scope="col">Hasiera Data</th>
+                <th scope="col">Amaiera Data</th>
+                <th scope="col">Akzioak</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($bidaiak as $bidaia)
+            <tr>
+                <th scope="row"><a href="{{route('bidaiak.show', $bidaia->id)}}">{{$bidaia->helmuga}}</a></th>
+                <td>{{$bidaia->hasiera}}</td>
+                <td>{{$bidaia->amaiera}}</td>
+                <td>
+                    <a href="{{route('bidaiak.edit', $bidaia->id)}}" class="btn btn-success">EDITAR</a>
+                    <form method="POST" action="{{route('bidaiak.destroy', $bidaia->id)}}">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="BORRAR" class="btn btn-danger"/>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </body>
 
 </html>
