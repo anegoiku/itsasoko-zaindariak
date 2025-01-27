@@ -27,6 +27,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('medikuak.index')}}">Medikuak</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('erreskateak.index')}}">Erreskateak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('erreskatatuak.index')}}">Erreskatatuak</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -52,7 +58,7 @@
                     <form method="POST" action="{{route('medikuak.destroy', $medikua->id)}}">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="BORRAR" class="btn btn-danger"/>
+                        <input type="submit" value="BORRAR" class="btn btn-danger" />
                     </form>
                 </td>
             </tr>

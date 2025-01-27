@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TripulantesController;
 use App\Http\Controllers\BidaiakController;
 use App\Http\Controllers\MedikuakController;
+use App\Http\Controllers\ErreskatatuakController;
+use App\Http\Controllers\ErreskateakController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -69,6 +71,13 @@ Route::get('/medikuak/{medikuak}/edit', [MedikuakController::class, 'edit'])->na
 Route::put('/medikuak/update/{medikuak}', [MedikuakController::class, 'update'])->name('medikuak.update');
 
 Route::delete('/medikuak/destroy/{medikuak}', [MedikuakController::class, 'destroy'])->name('medikuak.destroy');
+
+
+//ERRESKATEAK
+Route::resource('erreskateak', ErreskateakController::class);
+
+//ERRESKATATUAK
+Route::resource('erreskatatuak', ErreskatatuakController::class);
 
 
 require __DIR__ . '/auth.php';
